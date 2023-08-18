@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+#Lewy {
+    background-color: #f0f0f0;
+    height: 100vh;
+}
+
+#Lewy ul {
+    padding: 20px;
+    text-align: center;
+    list-style-type: none;
+}
+
+#Lewy ul li {
+    margin-top: 20%;
+
+}
+
+#Lewy ul a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+
+}

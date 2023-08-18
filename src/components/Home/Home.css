@@ -1,0 +1,15 @@
+.home {
+    text-align: center;
+
+}
+
+.home p {
+    padding: 10px;
+
+
+}
+
+.home select {
+    margin: 10px;
+    padding: 10px;
+}
