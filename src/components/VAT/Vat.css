@@ -3,17 +3,17 @@
 .table-container {
     border: 1px solid #ccc;
     padding: 10px;
-    width: 80%; /* Dopasuj do swoich preferencji */
+    width: 90%; /* Dopasuj do swoich preferencji */
     margin: 0 auto; /* Wycentrowanie tabeli */
   }
   
-  .worker-table {
+  .vat-table {
     border-collapse: collapse;
     width: 100%;
   }
   
-  .worker-table th,
-  .worker-table td {
+  .vat-table th,
+  .vat-table td {
     border: 1px solid #a50d0d;
     padding: 8px;
     text-align: left;

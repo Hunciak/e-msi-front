@@ -1,10 +1,11 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import "./Home.css"
 
 export const Home = () => {
 
     const colorsArray = ['zielony', 'niebieski', 'szary', 'turkusowy', 'granatowy', 'czerwony', 'biały'];
-    const vatArray = ['ZW', 'NP.', '0%', '3%',  ];
+    const vatArray = ['ZW', 'NP.', '0%', '3%', '8%', '23%' ];
+    const elementArray = ['Element', 'Element', 'Element'];
 
     const [data, setData] = useState({
         nip: '',
@@ -13,14 +14,12 @@ export const Home = () => {
         dataPowstania: new Date(),
         ulica: '',
         numerDomu: '',
-        numberMieszkania: '',
+        numerMieszkania: '',
         uwagi: '',
         color: '',
         vat: '',
     })
 
-
-    const [vat, setVat] = useState();
     const updateForm = (key, value) => {
         setData(data => ({
             ...data,
@@ -54,59 +53,57 @@ export const Home = () => {
             }
         </select>
 
+    const olElement = elementArray.map((element, i) => (
+        <li key={i}>{element}</li>
+    ))
+            
     return (
         <div className='home'>
-            <form >
+            <p >
+                <h1>i</h1>
                 <h1>Wprowadź dane</h1>
                 <p>Wprowadź nip</p>
                 <input type="text"
                        placeholder=''
                        name="nip"
-                       required
                        value={data.nip}
                        onChange={e => updateForm('nip', e.target.value)}/>
                 <p>Wprowadź regon</p>
                 <input type="number"
                        placeholder=''
                        name="regon"
-                       required
                        value={data.regon}
                        onChange={e => updateForm('regon', e.target.value)}/>
                 <p>Wprowadź nazwę</p>
                 <input type="text"
                        placeholder=''
                        name="nazwa"
-                       required
                        value={data.nazwa}
                        onChange={e => updateForm('nazwa', e.target.value)}/>
-                <p>Wprowadź date powstania</p>
+                <p>Wprowadź datę powstania</p>
                 <input
                     type="date"
                     placeholder=""
                     name="dataPowstania"
-                    required
-                    value={data.dataPowstania.toISOString().substr(0, 10)}
+                    value={data.dataPowstania}
                     onChange={(e) => updateForm("dataPowstania", e.target.value)}
                 />
                 <p>Wprowadź nazwę ulicy</p>
                 <input type="text"
                        placeholder=''
                        name="ulica"
-                       required
                        value={data.ulica}
                        onChange={e => updateForm('ulica', e.target.value)}/>
                 <p>Wprowadź numer domu</p>
                 <input type="text"
                        placeholder=''
                        name="numerDomu"
-                       required
                        value={data.numerDomu}
                        onChange={e => updateForm('numerDomu', e.target.value)}/>
                 <p>Wprowadź numer mieszkania</p>
                 <input type="text"
                        placeholder=''
                        name="numerMieszkania"
-                       required
                        value={data.numberMieszkania}
                        onChange={e => updateForm('numerMieszkania', e.target.value)}/>
                 <p>Uwagi</p>
@@ -115,12 +112,16 @@ export const Home = () => {
                        name="uwagi"
                        value={data.uwagi}
                        onChange={e => updateForm('uwagi', e.target.value)}/>
-            </form>
+            </p>
+            <h1>ii</h1>
             <p>Kolory</p>
             {selectColor}
             <p>VAT</p>
             {selectVat}
-
+            <h1>iii</h1>
+            <ol>
+                {olElement}
+            </ol>
         </div>
     )
 }
