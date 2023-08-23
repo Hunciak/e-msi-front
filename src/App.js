@@ -6,6 +6,8 @@ import {Navbar} from "./components/Navbar/Navbar";
 import { Workers } from './components/Workers/Workers';
 import { VAT } from './components/VAT/Vat';
 import "./App.css"
+import { Delegations } from './components/Delegations/Delegations';
+import { Contractors } from './components/Contractors/Contractors';
 
 export const App = () => {
     return (
@@ -18,11 +20,8 @@ export const App = () => {
                     <Route path='/' element={<Home/>}/>
                     <Route path='/workers' element={<Workers/>}/>
                     <Route path='/vat' element={<VAT/>}/>
-                    {/*<Route path='/aftersignin' element={<LayoutPanel/>}/>*/}
-                    {/*<Route path='/contact' element={<Contact/>}/>*/}
-                    {/*<Route path='/' element={<Layout/>}/>*/}
-                    {/*<Route path='/signin' element={<SignIn/>}/>*/}
-                    {/*<Route path='/profil' element={<Profile/>}/>*/}
+                    <Route path='/delegations' element={<Delegations/>}/>
+                    <Route path='/contractors' element={<Contractors/>}/>
                 </Routes>
             </div>
 

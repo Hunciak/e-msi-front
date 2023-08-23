@@ -6,13 +6,13 @@
     margin: 0 auto;
   }
   
-  .vat-table {
+  .delegations-table {
     border-collapse: collapse;
     width: 100%;
   }
   
-  .vat-table th,
-  .vat-table td {
+  .delegations-table th,
+  .delegations-table td {
     border: 1px solid #a50d0d;
     padding: 8px;
     text-align: left;

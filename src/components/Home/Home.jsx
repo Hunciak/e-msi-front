@@ -59,9 +59,8 @@ export const Home = () => {
             
     return (
         <div className='home'>
-            <p >
-                <h1>i</h1>
-                <h1>Wprowadź dane</h1>
+            <h1>Wprowadź dane</h1>
+            <form >
                 <p>Wprowadź nip</p>
                 <input type="text"
                        placeholder=''
@@ -112,13 +111,11 @@ export const Home = () => {
                        name="uwagi"
                        value={data.uwagi}
                        onChange={e => updateForm('uwagi', e.target.value)}/>
-            </p>
-            <h1>ii</h1>
+            </form>
             <p>Kolory</p>
             {selectColor}
             <p>VAT</p>
             {selectVat}
-            <h1>iii</h1>
             <ol>
                 {olElement}
             </ol>

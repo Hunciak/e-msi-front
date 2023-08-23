@@ -1,18 +1,18 @@
 
-.table-container {
+.contrators-container {
     border: 1px solid #ccc;
     padding: 10px;
     width: 90%;
     margin: 0 auto;
   }
-  
-  .vat-table {
+
+  .contractors-table {
     border-collapse: collapse;
-    width: 100%;
+    width: 90%;
   }
   
-  .vat-table th,
-  .vat-table td {
+  .contractors-table th,
+  .contractors-table td {
     border: 1px solid #a50d0d;
     padding: 8px;
     text-align: left;

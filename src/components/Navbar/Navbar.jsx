@@ -17,7 +17,7 @@ export const Navbar = () => {
                             <NavLink to="/vat">Tabela Faktur VAT</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/delegation">Tabela Delegacji BD</NavLink>
+                            <NavLink to="/delegations">Tabela Delegacji BD</NavLink>
                         </li>
                         <li>
                             <NavLink to="/contractors">Dane Kontrahentów</NavLink>
