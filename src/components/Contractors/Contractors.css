@@ -15,6 +15,12 @@
     text-align: center;
     padding: 5px;
   }
+  .button-contractor {
+    display: grid;
+    place-items: center;
+    padding: 5px;
+    /* height: 50px; */
+  }
   .contractors-table th,
   .contractors-table td {
     border: 1px solid #a50d0d;

@@ -28,7 +28,7 @@ export const Contractors = () => {
     const sendContractor = async (e) => {
         e.preventDefault();
         try {
-            const res = await fetch(`http://localhost:3001/contractors`, {
+            const res = await fetch(`e-msi-back-mihas-backend-1/contractors`, {
               method: 'POST',
               body: JSON.stringify(addContractor),
               headers: {
@@ -49,7 +49,7 @@ export const Contractors = () => {
 
     const getContractors = async () => {
         try {
-            const res = await fetch(`http://localhost:3001/contractors`, {
+            const res = await fetch(`e-msi-back-mihas-backend-1/contractors`, {
               method: 'GET',
               headers: {
                 'Content-Type': 'application/json'
@@ -65,7 +65,7 @@ export const Contractors = () => {
 
     const deleteContractor = async (e, key) => {
         e.preventDefault();
-        const res = await fetch(`http://localhost:3001/contractors/delete?id=${key}`, {
+        const res = await fetch(`e-msi-back-mihas-backend-1/contractors/delete?id=${key}`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -78,7 +78,7 @@ export const Contractors = () => {
 
     const editContractor = async (e, id) => {
         e.preventDefault();
-        const res = await fetch(`http://localhost:3001/contractors/edit`, {
+        const res = await fetch(`e-msi-back-mihas-backend-1/contractors/edit`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -274,9 +274,12 @@ export const Contractors = () => {
             </tbody>
           </table>
           {addContractors ? AddContractorHTML : null}
-          <button className="add-contractor" onClick={() => setAddContractors(!addContractors)}>{addContractors ? "Zakończ dodawanie kontrahenta" : "Dodaj kontrahenta"}</button>
-          <button className="add-contractor" onClick={() => setEditContractorFlag(!editContractorFlag)}>{editContractorFlag ? "Zakończ edycję" : "Edytuj"}</button>
+          <div  className="button-contractor">
+          <button onClick={() => setAddContractors(!addContractors)}>{addContractors ? "Zakończ dodawanie kontrahenta" : "Dodaj kontrahenta"}</button>
+          <button onClick={() => setEditContractorFlag(!editContractorFlag)}>{editContractorFlag ? "Zakończ edycję" : "Edytuj"}</button>
           {editContractorFlag ? <button className="add-contractor" onClick={(e) => editContractor(e)}>Zapisz zmiany</button> : null}
+          </div>
+          
           </div>
     </>
 }
