@@ -11,6 +11,10 @@
     width: 90%;
   }
   
+  .add-contractor {
+    text-align: center;
+    padding: 5px;
+  }
   .contractors-table th,
   .contractors-table td {
     border: 1px solid #a50d0d;

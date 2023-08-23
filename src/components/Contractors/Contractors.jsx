@@ -93,7 +93,7 @@ export const Contractors = () => {
 
     const AddContractorHTML = 
         (
-            <div>
+            <div className="add-contractor">
                 <form onSubmit={sendContractor}>
                     <h3>Dodaj kontrahenta</h3>
                     <p>Podaj NIP:</p>
@@ -274,9 +274,9 @@ export const Contractors = () => {
             </tbody>
           </table>
           {addContractors ? AddContractorHTML : null}
-          <button onClick={() => setAddContractors(!addContractors)}>{addContractors ? "Zakończ dodawanie kontrahenta" : "Dodaj kontrahenta"}</button>
-          <button onClick={() => setEditContractorFlag(!editContractorFlag)}>{editContractorFlag ? "Zakończ edycję" : "Edytuj"}</button>
-          {editContractorFlag ? <button onClick={(e) => editContractor(e)}>Zapisz zmiany</button> : null}
+          <button className="add-contractor" onClick={() => setAddContractors(!addContractors)}>{addContractors ? "Zakończ dodawanie kontrahenta" : "Dodaj kontrahenta"}</button>
+          <button className="add-contractor" onClick={() => setEditContractorFlag(!editContractorFlag)}>{editContractorFlag ? "Zakończ edycję" : "Edytuj"}</button>
+          {editContractorFlag ? <button className="add-contractor" onClick={(e) => editContractor(e)}>Zapisz zmiany</button> : null}
           </div>
     </>
 }
