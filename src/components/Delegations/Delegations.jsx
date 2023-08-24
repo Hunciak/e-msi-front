@@ -9,7 +9,7 @@ export const Delegations = () => {
     useEffect(() => {
       (async () => {
         try {
-          const res = await fetch(`http://141.95.67.150:3001/delegations`, {
+          const res = await fetch(`https://e-msi-back-mikym.me/delegations`, {
               method: 'GET',
               headers: {
                 'Content-Type': 'application/json'
